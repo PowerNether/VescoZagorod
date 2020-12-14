@@ -22,12 +22,8 @@
             <li class="headerTop__item last"><a class="headerTop__link" href="#">Подобрать объект</a></li>
           </ul>
           <ul class="headerTop__stat">
-            <li class="headerTop__statItem">
-              <p class="headerTop__statText headerTop__statText-heart">43</p>
-            </li>
-            <li class="headerTop__statItem">
-              <p class="headerTop__statText headerTop__statText-eye">5</p>
-            </li>
+            <li class="headerTop__statItem"><a class="headerTop__statText headerTop__statText-heart" href="#">43</a></li>
+            <li class="headerTop__statItem"><a class="headerTop__statText headerTop__statText-eye" href="#">5</a></li>
           </ul>
           <ul class="headerTop__social">
             <li class="headerTop__socialItem"><a class="headerTop__link" href="#"><img class="headerTop__socialIcon" src="./img/vkIcon.png" alt="Vk"/></a></li>
@@ -120,7 +116,10 @@
             </div>
             <div class="mainInfo__street">
               <p class="mainInfo__adress">Мытищинский район, Сорокино Осташковское шоссе, ~ 20 км</p>
-              <div class="mainInfo__btns"><a class="mainInfo__sell" href="#"><img class="mainInfo__icon" src="./img/pinBlue.png" alt="pin"/> Продать объект в этом поселке</a><a class="mainInfo__subscribe" href="#"><img class="mainInfo__icon" src="./img/bellGreen.png" alt="bell"/> Следить за ценой</a></div>
+              <div class="mainInfo__btns">
+                <button class="mainInfo__sell modal-trigger" data-target="modal1"><img class="mainInfo__icon" src="./img/pinBlue.png" alt="pin"/> Продать объект в этом поселке</button>
+                <button class="mainInfo__subscribe modal-trigger" data-target="modal2"><img class="mainInfo__icon" src="./img/bellGreen.png" alt="bell"/> Следить за ценой</button>
+              </div>
             </div>
           </div>
           <div class="mainDesc">
@@ -465,26 +464,22 @@
           </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="leftColumn">
-          <div class="village">
-            <div class="village__info">
-              <h3 class="village__title">Курорт Пирогово</h3>
-              <p class="village__street">Мытищинский район, Сорокино</p><a class="village__link" href="#">Смотреть все предложения</a>
-            </div>
-            <div class="village__desc">
-              <p class="village__amount">32</p>
-              <p class="village__text">объекта в продаже в данном посёлке</p>
-            </div>
+      <div class="posters">
+        <div class="village">
+          <div class="village__info">
+            <h3 class="village__title">Курорт Пирогово</h3>
+            <p class="village__street">Мытищинский район, Сорокино</p><a class="village__link" href="#">Смотреть все предложения</a>
+          </div>
+          <div class="village__desc">
+            <p class="village__amount">32</p>
+            <p class="village__text">объекта в продаже в данном посёлке</p>
           </div>
         </div>
-        <div class="rightColumn">
-          <div class="article"><img class="article__image" src="./img/article.png" alt="article"/>
-            <div class="article__overlay">
-              <p class="article__tag">Блог</p>
-              <h3 class="article__title">Нефть, коронавирус и солнышко разогрели спрос на загородные дома</h3>
-              <p class="article__date">18.05.2020</p>
-            </div>
+        <div class="article"><img class="article__image" src="./img/article.png" alt="article"/>
+          <div class="article__overlay">
+            <p class="article__tag">Блог</p>
+            <h3 class="article__title">Нефть, коронавирус и солнышко разогрели спрос на загородные дома</h3>
+            <p class="article__date">18.05.2020</p>
           </div>
         </div>
       </div>
@@ -1307,6 +1302,20 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <h4>Продать объект в этом поселке</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, excepturi.</p>
+      </div>
+      <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="#!">Закрыть</a></div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <h4>Следить за ценой</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="#!">Закрыть</a></div>
+    </div>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/materialize.min.js"></script>
     <script src="./js/lightgallery.min.js"></script>

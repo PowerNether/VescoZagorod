@@ -92,6 +92,10 @@ video {
 
 img {
   display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -323,6 +327,8 @@ a:hover {
   font-size: 13px !important;
   height: auto !important;
   text-transform: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .btn-black {
@@ -568,6 +574,16 @@ header .headerBottom__call {
 
 .boxOverlay__prev img {
   width: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-60%, -50%);
+      -ms-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .boxOverlay__next {
@@ -575,15 +591,6 @@ header .headerBottom__call {
   cursor: pointer;
   height: 60px;
   width: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   position: absolute;
@@ -596,9 +603,16 @@ header .headerBottom__call {
 
 .boxOverlay__next img {
   width: 13px;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%) rotate(180deg);
+      -ms-transform: translate(-40%, -50%) rotate(180deg);
+          transform: translate(-40%, -50%) rotate(180deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .boxOverlay__lotBlock {
@@ -877,10 +891,15 @@ header .headerBottom__call {
   font-size: 13px;
   line-height: 16px;
   color: #417FA2;
+  border: none;
 }
 
 .mainInfo__sell:hover {
   color: #417FA2B3;
+}
+
+.mainInfo__sell:focus {
+  background: #C8EEFF;
 }
 
 .mainInfo__subscribe {
@@ -895,10 +914,15 @@ header .headerBottom__call {
   font-size: 13px;
   line-height: 16px;
   color: #428057;
+  border: none;
 }
 
 .mainInfo__subscribe:hover {
   color: #428057B3;
+}
+
+.mainInfo__subscribe:focus {
+  background: #D7F8E2;
 }
 
 .mainInfo__icon {
@@ -1083,7 +1107,7 @@ header .headerBottom__call {
 
 .character__text-bold {
   color: #000000;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .layout {
@@ -1229,6 +1253,8 @@ header .headerBottom__call {
 
 .desc__text {
   margin-bottom: 30px;
+  color: #505050;
+  line-height: 30px;
 }
 
 .desc__text:last-of-type {
@@ -1428,6 +1454,7 @@ header .headerBottom__call {
 
 .subtitle-grey {
   color: #A4A4A4;
+  font-weight: 500;
 }
 
 .delimiter {
@@ -1491,6 +1518,15 @@ header .headerBottom__call {
   display: flex;
 }
 
+.posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 .village {
   min-height: 250px;
   width: 100%;
@@ -1506,6 +1542,7 @@ header .headerBottom__call {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 50px;
+  margin-right: 32px;
 }
 
 .village__title {
@@ -1852,6 +1889,8 @@ header .headerBottom__call {
 }
 
 .article {
+  max-width: 305px;
+  width: 100%;
   margin-bottom: 50px;
   position: relative;
   min-height: 250px;

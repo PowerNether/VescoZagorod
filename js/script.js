@@ -17,6 +17,7 @@ var km5 = tns({
   nav: false,
   prevButton: ".around__prev",
   nextButton: ".around__next",
+  mouseDrag: true,
 });
 var km10 = tns({
   container: ".km10",
@@ -26,6 +27,7 @@ var km10 = tns({
   nav: false,
   prevButton: ".around__prev",
   nextButton: ".around__next",
+  mouseDrag: true,
 });
 var km15 = tns({
   container: ".km15",
@@ -35,6 +37,7 @@ var km15 = tns({
   nav: false,
   prevButton: ".around__prev",
   nextButton: ".around__next",
+  mouseDrag: true,
 });
 var km20 = tns({
   container: ".km20",
@@ -44,6 +47,7 @@ var km20 = tns({
   nav: false,
   prevButton: ".around__prev",
   nextButton: ".around__next",
+  mouseDrag: true,
 });
 var km25 = tns({
   container: ".km25",
@@ -53,6 +57,7 @@ var km25 = tns({
   nav: false,
   prevButton: ".around__prev",
   nextButton: ".around__next",
+  mouseDrag: true,
 });
 var km30 = tns({
   container: ".km30",
@@ -62,6 +67,7 @@ var km30 = tns({
   nav: false,
   prevButton: ".around__prev",
   nextButton: ".around__next",
+  mouseDrag: true,
 });
 [].forEach.call(
   document.querySelectorAll(".object__sliderInner"),
@@ -84,6 +90,7 @@ var villageSlider = tns({
   prevButton: ".object__prev",
   nextButton: ".object__next",
   nested: "inner",
+  mouseDrag: true,
 });
 var similarSlider = tns({
   container: ".similarSlider",
@@ -93,6 +100,8 @@ var similarSlider = tns({
   nav: false,
   prevButton: ".object__prev",
   nextButton: ".object__next",
+  nested: "inner",
+  mouseDrag: true,
 });
 var aroundSlider = tns({
   container: ".aroundSlider",
@@ -102,10 +111,12 @@ var aroundSlider = tns({
   nav: false,
   prevButton: ".object__prev",
   nextButton: ".object__next",
+  nested: "inner",
+  mouseDrag: true,
 });
-$(".broker__unhide").on("click tap", function() {
-  $(this).hide()
-})
+$(".broker__unhide").on("click tap", function () {
+  $(this).hide();
+});
 $(".accardion__btn").on("click tap", function () {
   $(this).toggleClass("accardion__btn-rotate");
   $(".accardion__body").slideToggle();
@@ -164,3 +175,6 @@ $(".p-unhide").on("click tap", function (e) {
 });
 $(".layout__zoomIn").lightGallery();
 $(".boxSlider").lightGallery();
+$(document).ready(function(){
+  $('.modal').modal();
+});
