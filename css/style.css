@@ -2036,6 +2036,10 @@ header .headerBottom__call {
 
 .object__item {
   background: #FFFFFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .object__image {
@@ -2452,6 +2456,10 @@ header .headerBottom__call {
 .around__item {
   height: 100%;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .around__image {
